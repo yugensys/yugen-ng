@@ -1,0 +1,144 @@
+<main>
+
+  <table>
+    <tr>
+      <td colspan="4">
+        Basic
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ybutton id="100" mode="primary" type="submit" text="Basic" (onClick)="buttonEvent();" title="tooltip"
+          ariaLabel="submit button">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="101" mode="primary" type="submit" text="Disabled" [disabled]="true" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="102" mode="primary" type="button" text="Link" url="https://www.angularjswiki.com"
+          urlTarget="_self">
+        </ybutton>
+      </td>
+      <td>
+        {{title}}
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+        Icons
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ybutton id="103" mode="primary" type="submit" icon="fa fa-home" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="104" mode="primary" text="Go" type="submit" icon="fa fa-home" iconPos="left"
+          (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="105" mode="primary" text="Go" type="submit" icon="fa fa-home" iconPos="right" iconColor="yellow"
+          (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+        Badges
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ybutton id="106" mode="primary" type="submit" text="Go" (onClick)="buttonEvent();" badge="10"
+          badgeClassName="yBadge">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="107" mode="primary" type="submit" text="Go" (onClick)="buttonEvent();" icon="fa fa-bell"
+          iconPos="left" badge="10" badgeClassName="yBadge yBadgeSecondary">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="108" mode="primary" type="submit" (onClick)="buttonEvent();" icon="fa fa-bell" iconPos="left"
+          badge="10" badgeClassName="yBadge yBadgeSecondary">
+        </ybutton>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="5">
+        Rounded Buttons
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ybutton id="109" mode="primary-rounded" type="submit" text="Primary" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="110" mode="secondary-rounded" type="submit" text="Secondary" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="111" mode="success-rounded" type="submit" text="Success" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="112" mode="warning-rounded" type="submit" text="Warning" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="113" mode="danger-rounded" type="submit" text="Danger" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+        Button Size
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ybutton id="114" mode="primary-rounded y-btn-sm" type="submit" text="Small" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="115" mode="secondary-rounded" type="submit" text="Normal" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+      <td>
+        <ybutton id="116" mode="success-rounded y-btn-lg" type="submit" text="Large" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Button Set
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ybutton id="117" mode="primary y-btn-group" type="submit" text="Save" (onClick)="buttonEvent();">
+        </ybutton>
+        <ybutton id="118" mode="primary y-btn-group" type="submit" text="Delete" (onClick)="buttonEvent();">
+        </ybutton>
+        <ybutton id="119" mode="primary y-btn-group" type="submit" text="Cancel" (onClick)="buttonEvent();">
+        </ybutton>
+      </td>
+    </tr>
+  </table>
+  <br />
+
+
+
+
+
+</main>

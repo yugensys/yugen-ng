@@ -1,0 +1,32 @@
+<button [id]="id" [class]="classes" (click)="buttonClicked()" [type]="type" [disabled]="disabled" [title]="title" [attr.aria-label]="ariaLabel">
+
+  <div>
+
+    <div *ngIf="icon!=null" [style.float]="iconPos">
+      <span [style.color]="iconColor"><i [class]="icon"></i></span>
+    </div>
+
+    <div *ngIf="iconPos!=null">
+      <div *ngIf="iconPos=='right'" [style.padding-right]="icon!=undefined ? '20px' : '0px'">
+        <span *ngIf="text!=null">{{text}}</span>
+        <span *ngIf="badge!=null" [class]="badgeClassName">{{badge}}</span>
+      </div>
+
+      <div *ngIf="iconPos=='left'" [style.padding-left]="icon!=undefined ? '20px' : '0px'">
+        <span *ngIf="text!=null">{{text}}</span>
+        <span *ngIf="badge!=null" [class]="badgeClassName">{{badge}}</span>
+      </div>
+    </div>
+
+    <div *ngIf="text!=null && iconPos==null && badge!=null">
+      {{text}}
+      <span [class]="badgeClassName">{{badge}}</span>
+    </div>
+
+    <div *ngIf="text!=null && iconPos==null && badge==null">
+      {{text}}
+    </div>
+
+  </div>
+
+</button>
