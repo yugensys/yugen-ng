@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ButtonComponent } from 'src/components/button/button.component';
-import { SelectComponent } from 'src/components/select/select.component';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonExampleComponent } from './component-examples/button-example/button-example.component';
-
+import { SelectExampleComponent } from './component-examples/select-example/select-example.component';
+import { ComponentsModule } from 'yugen-angular';
 @NgModule({
   declarations: [
-    AppComponent, ButtonComponent,SelectComponent, ButtonExampleComponent
-  ],
+    AppComponent,
+    ButtonExampleComponent,
+    SelectExampleComponent, 
+    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

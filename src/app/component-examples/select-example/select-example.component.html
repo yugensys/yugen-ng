@@ -1,0 +1,140 @@
+<div style="padding: 10px;">
+    <div class="container-fluid" style="border: 1px solid rgb(194, 194, 194); padding: 10px;">
+      <div class="row">
+        <div class="col-md-3">
+          <div>Basic</div>
+        </div>
+        <div class="col-md-6">
+          <yselect [items]="Items" [ngValue]="itemValue" valueField="ID" textField="Name" [allowClear]="false"
+            placeholder="Level"></yselect>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+      <hr />
+  
+      <div class="row">
+        <div class="col-md-3">
+          <div>Editable</div>
+        </div>
+        <div class="col-md-6">
+          <yselect [items]="Items" [ngValue]="itemValue" valueField="ID" textField="Name" [allowClear]="false"
+            placeholder="Level"></yselect>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+      <hr />
+  
+      <div class="row">
+        <div class="col-md-3">
+          <div>Grouping</div>
+        </div>
+        <div class="col-md-6">
+          <yselect [ngValue]="itemId" [items]="itemList" placeholder="Select a Person or Group"></yselect>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+      <hr />
+  
+      <div class="row">
+        <div class="col-md-3">
+          <div>Search on multiple fields</div>
+        </div>
+        <div class="col-md-6">
+          <yselect #partToLocation [items]="partLocations" noResultsFound="Start typing to search..."
+            placeholder="Select Parts" [allowClear]="true" (search)="partFilter( $event, partToLocation )" [lazy]="true">
+            <ng-template select-dropdown-option let-option="option">
+              <div class="row">
+  
+                <div class="col-md-5 select-part-location">
+                  {{option.Location.Name}}:
+                  {{option.Name}}
+                </div>
+                <div class="col-md-5 select-part-name">
+                  {{option.Part.Number}}-{{option.Part.Description}}
+                </div>
+                <div class="col-md-2 part-quantity-align">
+                  {{option.Quantity}}
+                </div>
+  
+              </div>
+            </ng-template>
+  
+            <ng-template selected-dropdown-option let-option="option">
+  
+              <span class="selected-part-location">
+                {{option.Location.Name}}:
+                {{option.Name}}
+              </span>
+              <span class="selected-part-name">
+                {{option.Part.Number}} -
+                {{option.Part.Description}}
+              </span>
+  
+            </ng-template>
+          </yselect>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+      <hr />
+  
+      <div class="row">
+        <div class="col-md-3">
+          <div>Multi Select</div>
+        </div>
+        <div class="col-md-6">
+          <yselect [ngValue]="itemId" [items]="Items" placeholder="Select" [multiple]="true"></yselect>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+      <hr />
+  
+      <div class="row">
+        <div class="col-md-3">
+          <div>Value Change</div>
+        </div>
+        <div class="col-md-6">
+          <yselect [allowClear]="false" placeholder="Level" [items]="Items" [ngValue]="itemValue"
+            (ngValueChange)="eventChange($event);">
+          </yselect>
+        </div>
+        <div class="col-md-3">
+          {{labelValue}}
+        </div>
+      </div>
+      <hr />
+  
+      <div class="row">
+        <div class="col-md-3">
+          <div>Disabled</div>
+        </div>
+        <div class="col-md-6">
+          <yselect [allowClear]="false" placeholder="Level" [disabled]="true" [items]="Items" [ngValue]="itemValue">
+          </yselect>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+      <hr />
+  
+      <div class="row">
+        <div class="col-md-3">
+          <div>Object Value</div>
+        </div>
+        <div class="col-md-6">
+          <yselect [ngObject]="ItemObject" [ngValue]="itemId" [items]="Items" placeholder="Level"
+            (ngObjectChange)="objectEventChange($event);"></yselect>
+        </div>
+        <div class="col-md-3">
+          {{objectValue|json}}
+        </div>
+      </div>
+  
+  
+    </div>
+  </div>
+  
